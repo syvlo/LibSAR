@@ -14,20 +14,20 @@
  * \brief	Function that takes an imw file as input and return a cv::Mat
  *		storing it.
  * \param	DimFileName	*.dim file containing the dimension of the
-				image.
+ image.
  * \param	ImwFileName	*.imw file that contains the values (unsigned
-				int 16).
+ int 16).
  * \return	The cv::Mat (of type CV_16U)
  */
 cv::Mat
 ReadImw (const char* DimFileName,
-	 const char* ImwFileName);
+		 const char* ImwFileName);
 
 /**
  * \brief	Function that takes an imw file as input and return a cv::Mat
  *		storing it.
  * \param	FileName	File name of the input. So FileName.dim and
-				FileNale.imw must exists.
+ FileNale.imw must exists.
  * \return	The cv::Mat (of type CV_16U)
  */
 cv::Mat
@@ -41,18 +41,18 @@ ReadImw (const char* FileName);
  */
 void
 WriteImw (const cv::Mat image,
-	  const char* DimFileName,
-	  const char* ImwFileName);
+		  const char* DimFileName,
+		  const char* ImwFileName);
 
 /**
  * \brief	Write image to an imw file.
  * \param	image		The image to be written (CV_16U).
  * \param	ImwFileName	Base FileName. FileName.imw and FileName.dim
-				will be created.
- */
+ will be created.
+*/
 void
 WriteImw (const cv::Mat image,
-	  const char* FileName);
+		  const char* FileName);
 
 /**
  * \brief	Function that convert a CV_16U cv::Mat to a CV_8U (so it can be
@@ -64,8 +64,8 @@ WriteImw (const cv::Mat image,
  */
 cv::Mat
 convertTo8U (const cv::Mat	Input,
-	     double		nsigma = 3,
-	     double*		threshOutput = NULL);
+			 double		nsigma = 3,
+			 double*		threshOutput = NULL);
 
 /**
  * \brief	Function that convert a CV_16U cv::Mat to a CV_8U by putting
@@ -76,6 +76,6 @@ convertTo8U (const cv::Mat	Input,
  */
 cv::Mat
 convertTo8UUsingThresh(const cv::Mat	Input,
-		       double		thresh);
+					   double		thresh);
 
 #endif /* !IMW_HELPER_HH_ */
