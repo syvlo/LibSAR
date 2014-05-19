@@ -23,7 +23,7 @@ ReadImw (const char* DimFileName,
     }
     else
     {
-	throw std::runtime_error("Problem when opening dim file.");
+		throw std::runtime_error(std::string("Problem when opening dim file ") + std::string(DimFileName));
     }
 
     std::clog << "Opening " << ImwFileName << " with dimensions h = " << height
@@ -46,7 +46,7 @@ ReadImw (const char* DimFileName,
     }
     else
     {
-	throw std::runtime_error("Problem when opening imw file.");
+		throw std::runtime_error(std::string("Problem when opening imw file ") + std::string(ImwFileName));
     }
 
     return output;
