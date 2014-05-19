@@ -84,7 +84,7 @@ WriteImw (const cv::Mat		image,
     }
     else
     {
-		throw std::runtime_error("Problem when opening dim file.");
+		throw std::runtime_error(std::string("Problem when writing dim file ") + std::string(DimFileName));
     }
 
     std::ofstream imwFile (ImwFileName, std::ifstream::out);
@@ -104,7 +104,7 @@ WriteImw (const cv::Mat		image,
     }
     else
     {
-		throw std::runtime_error("Problem when opening imw file.");
+		throw std::runtime_error(std::string("Problem when writing imw file ") + std::string(ImwFileName));
     }
 
 }
